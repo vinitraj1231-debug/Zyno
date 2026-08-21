@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { CATEGORIES } from '@/data/blogs';
-import { Zap, Search, Menu, X, ShieldCheck, Bot, MessageSquare, TrendingUp, Sparkles } from 'lucide-react';
+import { Zap, Search, Menu, X, ShieldCheck, Bot, MessageSquare, TrendingUp, Sparkles, Shield, FileText, Info, Mail, AlertTriangle, Cookie, ShieldAlert } from 'lucide-react';
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -136,26 +136,64 @@ export function Header() {
           ))}
 
           <div className="border-t border-slate-800 my-2 pt-2 space-y-1">
+            <div className="text-[10px] font-bold uppercase tracking-wider text-slate-500 px-3 pt-1">
+              Legal & Compliance
+            </div>
             <Link
-              href="/archive"
+              href="/privacy-policy"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block px-3 py-2 text-sm text-slate-400 hover:text-white"
+              className="flex items-center gap-2 px-3 py-1.5 text-sm text-slate-400 hover:text-white"
             >
-              All Articles Archive
+              <Shield className="w-4 h-4 text-emerald-400" />
+              <span>Privacy Policy</span>
+            </Link>
+            <Link
+              href="/terms-and-conditions"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="flex items-center gap-2 px-3 py-1.5 text-sm text-slate-400 hover:text-white"
+            >
+              <FileText className="w-4 h-4 text-indigo-400" />
+              <span>Terms & Conditions</span>
             </Link>
             <Link
               href="/about-us"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block px-3 py-2 text-sm text-slate-400 hover:text-white"
+              className="flex items-center gap-2 px-3 py-1.5 text-sm text-slate-400 hover:text-white"
             >
-              About Zynochat
+              <Info className="w-4 h-4 text-purple-400" />
+              <span>About Us</span>
             </Link>
             <Link
               href="/contact-us"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block px-3 py-2 text-sm text-slate-400 hover:text-white"
+              className="flex items-center gap-2 px-3 py-1.5 text-sm text-slate-400 hover:text-white"
             >
-              Contact Support
+              <Mail className="w-4 h-4 text-cyan-400" />
+              <span>Contact Support</span>
+            </Link>
+            <Link
+              href="/disclaimer"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="flex items-center gap-2 px-3 py-1.5 text-sm text-slate-400 hover:text-white"
+            >
+              <AlertTriangle className="w-4 h-4 text-amber-400" />
+              <span>Disclaimer</span>
+            </Link>
+            <Link
+              href="/cookie-policy"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="flex items-center gap-2 px-3 py-1.5 text-sm text-slate-400 hover:text-white"
+            >
+              <Cookie className="w-4 h-4 text-purple-400" />
+              <span>Cookie Policy</span>
+            </Link>
+            <Link
+              href="/dmca"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="flex items-center gap-2 px-3 py-1.5 text-sm text-slate-400 hover:text-white"
+            >
+              <ShieldAlert className="w-4 h-4 text-rose-400" />
+              <span>DMCA Policy</span>
             </Link>
           </div>
         </div>

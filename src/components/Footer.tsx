@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { CATEGORIES } from '@/data/blogs';
-import { Zap, Shield, FileText, Mail, Info, Heart, Globe, MessageSquare } from 'lucide-react';
+import { Zap, Shield, FileText, Mail, Info, Globe, AlertTriangle, Cookie, ShieldAlert } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -78,26 +78,44 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/privacy-policy" className="flex items-center gap-1.5 hover:text-indigo-400 transition">
-                  <Shield className="w-3.5 h-3.5" />
+                  <Shield className="w-3.5 h-3.5 text-emerald-400" />
                   <span>Privacy Policy</span>
                 </Link>
               </li>
               <li>
                 <Link href="/terms-and-conditions" className="flex items-center gap-1.5 hover:text-indigo-400 transition">
-                  <FileText className="w-3.5 h-3.5" />
+                  <FileText className="w-3.5 h-3.5 text-indigo-400" />
                   <span>Terms & Conditions</span>
                 </Link>
               </li>
               <li>
                 <Link href="/about-us" className="flex items-center gap-1.5 hover:text-indigo-400 transition">
-                  <Info className="w-3.5 h-3.5" />
+                  <Info className="w-3.5 h-3.5 text-purple-400" />
                   <span>About Us</span>
                 </Link>
               </li>
               <li>
                 <Link href="/contact-us" className="flex items-center gap-1.5 hover:text-indigo-400 transition">
-                  <Mail className="w-3.5 h-3.5" />
+                  <Mail className="w-3.5 h-3.5 text-cyan-400" />
                   <span>Contact Us</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/disclaimer" className="flex items-center gap-1.5 hover:text-indigo-400 transition">
+                  <AlertTriangle className="w-3.5 h-3.5 text-amber-400" />
+                  <span>Disclaimer</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/cookie-policy" className="flex items-center gap-1.5 hover:text-indigo-400 transition">
+                  <Cookie className="w-3.5 h-3.5 text-purple-400" />
+                  <span>Cookie Policy</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/dmca" className="flex items-center gap-1.5 hover:text-indigo-400 transition">
+                  <ShieldAlert className="w-3.5 h-3.5 text-rose-400" />
+                  <span>DMCA Policy</span>
                 </Link>
               </li>
             </ul>
@@ -107,7 +125,7 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-slate-900 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-          <p>© {new Date().getFullYear()} Zynochat.in — All rights reserved.</p>
+          <p>© 2026 Zynochat.in — All rights reserved.</p>
           <p className="flex items-center gap-1">
             Engineered for low latency, zero-knowledge privacy & AI search intelligence.
           </p>
